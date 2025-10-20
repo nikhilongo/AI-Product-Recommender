@@ -205,3 +205,31 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# Python
+venv/
+myenv/
+__pycache__/
+*.pyc
+*.pkl
+*.bin
+*.pt
+
+# Node
+node_modules/
+dist/
+
+# Environment & secrets
+.env
+backend/.env
+frontend/.env
+
+# Local data
+backend/rag_artifacts/
+data/
+
+# System files
+.DS_Store
+*.log
+
