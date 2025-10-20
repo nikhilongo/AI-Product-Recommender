@@ -1,4 +1,4 @@
-# 🪑 AI Furniture Recommendation Web App
+# 🪑 AI Product Recommendation Web App
 
 An intelligent furniture recommendation system that uses **AI-powered multimodal retrieval** and **generative creativity** to recommend furniture products based on user queries or images.
 
@@ -28,4 +28,5 @@ And the system will:
 ---
 
 ## 🏗️ Project Structure
+
 
