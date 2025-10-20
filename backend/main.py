@@ -1,8 +1,10 @@
 # backend/main.py
+import os
+import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import pickle, faiss, numpy as np, torch, os, json, requests
+import pickle, faiss, numpy as np, torch, json, requests
 from sentence_transformers import SentenceTransformer
 from pathlib import Path
 import open_clip
@@ -127,7 +129,7 @@ def generate_structured_recommendations(context_text, query):
 
     # attempt to extract JSON safely
     try:
-        json_text = text[text.find("{") : text.rfind("}") + 1]
+        json_text = text[text.find("{"): text.rfind("}") + 1]
         data = json.loads(json_text)
         return data
     except Exception as e:
@@ -153,3 +155,11 @@ async def recommend(req: RecommendRequest):
 @app.get("/")
 async def home():
     return {"message": "Furniture Recommendation API is running 🚀"}
+
+
+# ==============================
+# ENTRY POINT (for Render)
+# ==============================
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("backend.main:app", host="0.0.0.0", port=port)
