@@ -1,5 +1,5 @@
 pandas
-numpy
+numpy<2
 google-generativeai
 python-dotenv
 tqdm==4.66.4
