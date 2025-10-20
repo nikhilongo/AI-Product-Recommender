@@ -1,0 +1,16 @@
+pandas
+numpy
+google-generativeai
+python-dotenv
+tqdm==4.66.4
+sentence-transformers==2.7.0
+transformers==4.43.3
+torch>=2.2.0
+faiss-cpu==1.8.0
+protobuf>=4.25.0
+open-clip-torch
+pillow
+requests
+fastapi
+uvicorn[standard]
+python-multipart
