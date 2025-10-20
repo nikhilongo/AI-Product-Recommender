@@ -1,5 +1,39 @@
+# ===== Python & FastAPI =====
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+
+# Virtual environment
+myenv/
+
+# Environment variables
 .env
-*.pkl
-*.bin
+
+# Model & index artifacts
 rag_artifacts/
+*.bin
+*.pkl
+*.npy
+
+# Build and cache files
+*.egg-info/
+dist/
+build/
+.cache/
+.vscode/
+.idea/
+
+# Node (frontend)
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log
+yarn-error.log
+
+# OS/system files
+.DS_Store
+Thumbs.db
