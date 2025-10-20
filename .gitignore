@@ -1,17 +1,5 @@
-# Python
 __pycache__/
-*.pyc
-venv/
-myenv/
-
-# Node
-node_modules/
-dist/
-build/
-
-# Environment
 .env
-
-# OS files
-.DS_Store
-Thumbs.db
+*.pkl
+*.bin
+rag_artifacts/
