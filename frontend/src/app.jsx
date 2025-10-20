@@ -5,6 +5,7 @@ import ProductCard from "./components/ProductCard";
 import SearchBar from "./components/SearchBar";
 import "./styles.css";
 
+
 function App() {
   const [query, setQuery] = useState("");
   const [imageUrl, setImageUrl] = useState("");
