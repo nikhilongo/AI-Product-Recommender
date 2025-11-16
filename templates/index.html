@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multimodal RAG Search</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h2>Multimodal RAG Search Demo</h2>
+
+<div class="container">
+    
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <h3>Search with Text</h3>
+        <input type="hidden" name="mode" value="text_query">
+        <input type="text" name="text_query" placeholder="Enter search text..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    <form action="/" method="POST" enctype="multipart/form-data" style="margin-top:25px;">
+        <h3>Search with Image</h3>
+        <input type="hidden" name="mode" value="image_query">
+        <input type="file" name="image_file" accept="image/*" required>
+        <button type="submit">Search</button>
+    </form>
+
+</div>
+
+{% if answer %}
+<div class="answer">
+    <h3>Gemini Answer</h3>
+    <p>{{ answer }}</p>
+</div>
+{% endif %}
+
+{% if results %}
+<div class="results">
+    <h3>Top Matches</h3>
+    {% for r in results %}
+        <div class="item">
+            <p><b>Text:</b> {{ r['text'] }}</p>
+            <img src="{{ r['image_url'] }}" width="220">
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+</body>
+</html>
